@@ -15,6 +15,7 @@ class Orlai:
         self.fitted = False
         self.d = None
         self.c_e = None
+        self.initialized = False
 
         if init_w is not None:
             self.initialized = True
@@ -35,7 +36,7 @@ class Orlai:
             crossval_param = 10
             ):
         #TODO: implement crossvalidating alpha
-        #TODO: implement giving covariance matrix as input (for case when user has access to this knowledge)
+        #TODO: implement giving data covariance matrix as input (for case when user has access to this knowledge)
 
         self.fitted = True
         self.d = X.shape[1]

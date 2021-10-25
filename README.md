@@ -16,8 +16,8 @@ The following is implemented in `example.ipynb`.
 
 ```
 import numpy as np
-n = 300 # number of datapoints
-d = 600 # dimension
+n = 500 # number of datapoints
+d = 1000 # dimension
 c = np.eye(d)
 for i in range(d):
     for j in range(d):
@@ -41,7 +41,7 @@ y_test = X_test.dot(w_star) + np.random.multivariate_normal(mean = [0],cov = [[1
 
 # Fit and predict
 ```
-orlai = Orlai()
+orlai = Orlai_model.Orlai()
 orlai.fit(X_train, y_train)
 y_test_orlai = orlai.predict(X_test)
 ```
@@ -57,8 +57,8 @@ y_test_reg = reg.predict(X_test)
 # Compare
 
 ```
-print(np.linalg.norm(y_test - y_test_orlai)**2)
-print(np.linalg.norm(y_test - y_test_reg)**2)
+print(np.linalg.norm(y_test - y_test_orlai)**2/n)
+print(np.linalg.norm(y_test - y_test_reg)**2/n)
 ```
 
 
