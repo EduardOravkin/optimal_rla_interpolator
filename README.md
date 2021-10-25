@@ -1,4 +1,4 @@
-# Optimal Response-Linear Achievable Iterpolator
+# Optimal Response-Linear Achievable Interpolator
 
 # TODO: upload package to pypi
 
@@ -28,28 +28,29 @@ for i in range(d):
 
 `
 X_train = np.random.multivariate_normal(mean = np.zeros(d),cov = c, size = n)
-X_test = np.random.multivariate_normal(mean = np.zeros(d),cov = c, size = n/10)
+X_test = np.random.multivariate_normal(mean = np.zeros(d),cov = c, size = int(n/10))
 `
 
 ### Generate data according to `y = X.dot(w_star) + xi`
 
 ```
 w_star = np.random.multivariate_normal(mean = np.zeros(d),cov = np.eye(d))
-y_train = X_train.dot(w_star) + np.random.multivariate_normal(mean = 0,cov = 1, size = n)
-y_test = X_test.dot(w_star) + np.random.multivariate_normal(mean = 0,cov = 1, size = n/10)
+y_train = X_train.dot(w_star) + np.random.multivariate_normal(mean = [0],cov = [[1]], size = n).reshape(n,)
+y_test = X_test.dot(w_star) + np.random.multivariate_normal(mean = [0],cov = [[1]], size = int(n/10)).reshape(int(n/10),)
 ```
 
 # Fit and predict
 ```
 orlai = Orlai()
-orlai.fit(X_train)
+orlai.fit(X_train, y_train)
 y_test_orlai = orlai.predict(X_test)
 ```
 
 # Fit and predict for minimum-norm-interpolator
 ```
 from sklearn.linear_model import LinearRegression
-reg = LinearRegression().fit(X_train, y_train)
+reg = LinearRegression()
+reg.fit(X_train, y_train)
 y_test_reg = reg.predict(X_test)
 ```
 

@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: orlai
+Version: 1.0.0
+Summary: Package which implements the Optimal Response-Linear Achievable Interpolator in Linear Regression.
+Home-page: UNKNOWN
+Author: Eduard Oravkin
+Author-email: eduard.oravkin@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+License-File: LICENSE
+
+UNKNOWN
+
