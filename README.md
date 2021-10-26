@@ -41,7 +41,8 @@ y_test = X_test.dot(w_star) + np.random.multivariate_normal(mean = [0],cov = [[1
 
 # Fit and predict
 ```
-orlai = Orlai_model.Orlai()
+from orlai.orlai_model import Orlai
+orlai = Orlai()
 orlai.fit(X_train, y_train)
 y_test_orlai = orlai.predict(X_test)
 ```
