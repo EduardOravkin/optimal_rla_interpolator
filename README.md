@@ -2,10 +2,6 @@
 
 This repo contains the implementation of the optimal response-linear achievable interpolator from https://arxiv.org/abs/2110.11258 in python.
 
-## TODO: implement multiprocessing
-## TODO: implement crossvalidation of alpha 
-## TODO: upload package to pypi
-
 ## Installation
 
 Install the python package by cloning the repo and by `pip install orlai/` from the root of the directory. In the future the package will be uploaded to the pip package index.
