@@ -4,7 +4,7 @@ This repo contains the implementation of the optimal response-linear achievable 
 
 ## Installation
 
-Install the python package by cloning the repo and by `pip install orlai/` from the root of the directory. In the future the package will be uploaded to the pip package index.
+Install the python package by cloning the repo and by `pip install orlai/` from the root of the directory. 
 
 ## Usage
 
