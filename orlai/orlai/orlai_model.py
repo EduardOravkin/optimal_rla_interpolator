@@ -6,8 +6,6 @@ from sklearn.model_selection import train_test_split
 
 
 class Orlai:
-    #TODO: make self.d, self.initialized private variables
-    #TODO: make correct methods static
 
 
     def __init__(self, init_w = None):
