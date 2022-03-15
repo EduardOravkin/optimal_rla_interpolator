@@ -12,14 +12,14 @@ Install the python package by cloning the repo and by `pip install orlai/` from 
 
 ```
 import numpy as np
-n = 500 # number of datapoints
-n_test = int(n/10)
-d = 1000 # dimension
+n = 300 # number of datapoints
+n_test = int(n/5)
+d = 400 # dimension
 c = np.eye(d)
 
 for i in range(d):
     for j in range(d):
-            c[i,j] = 0.5**(abs(i-j))
+            c[i,j] = 0.9**(abs(i-j))
 ```
 
 ### Generate features
@@ -33,8 +33,8 @@ X_test = np.random.multivariate_normal(mean = np.zeros(d),cov = c, size = n_test
 
 ```
 w_star = np.random.multivariate_normal(mean = np.zeros(d),cov = np.eye(d))
-y_train = X_train.dot(w_star) + np.random.multivariate_normal(mean = [0],cov = [[1]], size = n).reshape(n,)
-y_test = X_test.dot(w_star) + np.random.multivariate_normal(mean = [0],cov = [[1]], size = n_test).reshape(n_test),)
+y_train = X_train.dot(w_star) + np.random.multivariate_normal(mean = [0],cov = [[16]], size = n).reshape(n,)
+y_test = X_test.dot(w_star) + np.random.multivariate_normal(mean = [0],cov = [[16]], size = n_test).reshape(n_test,)
 ```
 
 ### Fit and predict

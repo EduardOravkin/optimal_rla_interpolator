@@ -3,6 +3,7 @@ import pandas as pd
 import scipy.linalg as sc
 from sklearn.covariance import LedoitWolf, GraphicalLasso
 from sklearn.model_selection import train_test_split
+from orlai.utils.compute_orlai import compute_orlai
 
 
 class Orlai:
